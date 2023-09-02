@@ -11,6 +11,7 @@ const passportLocal = require('./config/passport_local_strategy');
 const MongoStore=require('connect-mongo');
 const flash = require('connect-flash');
 const customMware = require('./config/middleware');
+const passportGoogle= require('./config/passport-google-oauth2-strategy');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -18,7 +19,6 @@ app.use(cookieParser());
 
 app.use(express.static('./assets'));
 app.use(expressLayouts);
-
 
 
 // Set the view engine to EJS
@@ -49,17 +49,20 @@ app.use(session({
   })
 }));
 
+
 //passport js setup
 app.use(passport.initialize());
 app.use(passport.session());
 //app.use(passport.checkAuthentication); // Use the checkAuthentication middleware
 app.use(passport.setAuthenticatedUser);
 
+
 app.use(flash());
 app.use(customMware.setFlash);
 
 
 app.use('/', require('./routes'));
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`)

@@ -92,7 +92,7 @@ module.exports.signup = (req, res) => {
 
  module.exports.createSession =  function(req, res){
     req.flash('success', 'Logged in Successfully');
-    return res.redirect('./profile');
+   return res.redirect('/users/profile');
  }
 
 // usersController.js
@@ -117,7 +117,7 @@ module.exports.destroySession = async function(req, res) {
         console.error(error);
         // You might want to display an error page or a message to the user
         return res.redirect('/');
-       }
+    }
 }
       
 

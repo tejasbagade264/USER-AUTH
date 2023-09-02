@@ -10,7 +10,7 @@
     
 }
 
-button{
+#signUp{
     background-color: rgb(221, 18, 18);
     margin-top: 50px;
     color:white;
@@ -98,3 +98,16 @@ input:focus {
     
     margin-left: -570px;
 }
+
+.G-signin-button{
+    margin-top: -50px;
+}
+#G{
+    
+    background-color: rgb(5, 151, 255);
+    margin-top: 50px;
+    color:white;
+    height: 40px;
+    width: 300px;
+    font-size: 1.3rem;
+  }
