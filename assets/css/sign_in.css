@@ -10,7 +10,7 @@
    
 }
 
-#login{
+#SignIn{
     background-color: rgb(245, 32, 32);
     margin-top: 50px;
     color:white;
@@ -81,7 +81,7 @@ input:focus {
 }
   #G{
     background-color: rgb(5, 151, 255);
-    margin-top: 50px;
+    
     color:white;
     height: 40px;
     width: 300px;
